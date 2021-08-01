@@ -1,0 +1,32 @@
+{
+  "name": "turn-sprotty",
+  "version": "0.2.2",
+  "description": "Sprotty diagrams for the TGRL DSL",
+  "keywords": [
+    "sprotty",
+    "turn",
+    "diagram"
+  ],
+  "dependencies": {
+    "sprotty": "^0.8.0"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn build",
+    "clean": "rimraf lib",
+    "lint": "tslint -c ./tslint.json --project ./tsconfig.json",
+    "build": "tsc && yarn lint",
+    "watch": "tsc -w -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.2"
+  },
+  "files": [
+    "lib",
+    "src",
+    "css"
+  ],
+  "main": "lib/index",
+  "types": "lib/index"
+}

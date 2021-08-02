@@ -5,11 +5,17 @@
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  */
 
-.module {
-    fill: #333333;
+ .module {
+    fill: #1f2424;
     stroke: #ffffff;
     stroke-width: 2;
 }
+/* 
+.actor {
+    fill: #dbb0d4;
+    stroke: #ffffff;
+    stroke-width: 2;
+} */
 
 .module > .comp > .sprotty-label {
     font-weight: normal;
@@ -30,6 +36,13 @@
 .module .note.mouseover .front,
 .module .note.mouseover .noteEdge {
     fill: #e2c87a;
+}
+
+
+.goal {
+    fill: #159910af;
+    stroke: #ffffff;
+    stroke-width: 2;
 }
 
 body {

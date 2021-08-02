@@ -24,26 +24,19 @@ const turnDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) =>
 
     const context = { bind, unbind, isBound, rebind };
     configureModelElement(context, 'graph', SGraph, SGraphView);
-    const nodeFeatures: CustomFeatures = {
-        disable: [moveFeature],
-        enable: [openFeature]
-    };
-    configureModelElement(context, 'turnnode:goal', TURNNode, GoalNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:softgoal', TURNNode, SoftgoalNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:softgoaltry', TURNNode, SoftgoalNodeViewTry, nodeFeatures)
-    configureModelElement(context, 'turnnode:belief', TURNNode, BeliefNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:actor', TURNNode, ModuleNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:task', TURNNode, TaskNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:indicator', TURNNode, IndicatorNodeView, nodeFeatures)
-    configureModelElement(context, 'turnnode:resource', TURNNode, ResourceNodeView, nodeFeatures)
-    const labelFeatures: CustomFeatures = {
-        enable: [selectFeature, openFeature]
-    };
-    configureModelElement(context, 'label:heading', SLabel, SLabelView, labelFeatures);
-    configureModelElement(context, 'label:text', SLabel, SLabelView, labelFeatures);
-    configureModelElement(context, 'turnlabel:text', TURNLabel, SLabelView, labelFeatures);
-    configureModelElement(context, 'label:classHeader', SLabel, SLabelView, labelFeatures)
-    configureModelElement(context, 'comp:comp', SCompartment, SCompartmentView, labelFeatures)
+    configureModelElement(context, 'turnnode:goal', TURNNode, GoalNodeView)
+    configureModelElement(context, 'turnnode:softgoal', TURNNode, SoftgoalNodeView)
+    configureModelElement(context, 'turnnode:softgoaltry', TURNNode, SoftgoalNodeViewTry)
+    configureModelElement(context, 'turnnode:belief', TURNNode, BeliefNodeView)
+    configureModelElement(context, 'turnnode:actor', TURNNode, ModuleNodeView)
+    configureModelElement(context, 'turnnode:task', TURNNode, TaskNodeView)
+    configureModelElement(context, 'turnnode:indicator', TURNNode, IndicatorNodeView)
+    configureModelElement(context, 'turnnode:resource', TURNNode, ResourceNodeView)
+    configureModelElement(context, 'label:heading', SLabel, SLabelView)
+    configureModelElement(context, 'label:text', SLabel, SLabelView)
+    configureModelElement(context, 'turnlabel:text', TURNLabel, SLabelView)
+    configureModelElement(context, 'label:classHeader', SLabel, SLabelView)
+    configureModelElement(context, 'comp:comp', SCompartment, SCompartmentView)
     configureModelElement(context, 'comp:classHeader', SCompartment, HeaderCompartmentView)
     configureModelElement(context, 'edge:dependency', SEdge, DependencyEdgeView)
     configureModelElement(context, 'edge:decomposition', SEdge, DecompositionEdgeView)
@@ -52,6 +45,34 @@ const turnDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) =>
     configureModelElement(context, 'html', HtmlRoot, HtmlRootView)
     configureModelElement(context, 'pre-rendered', PreRenderedElement, PreRenderedView)
     configureModelElement(context, ExpandButtonHandler.TYPE, SButton, ExpandButtonView)
+    // const nodeFeatures: CustomFeatures = {
+    //     disable: [moveFeature],
+    //     enable: [openFeature]
+    // };
+    // configureModelElement(context, 'turnnode:goal', TURNNode, GoalNodeView)
+    // configureModelElement(context, 'turnnode:softgoal', TURNNode, SoftgoalNodeView)
+    // configureModelElement(context, 'turnnode:softgoaltry', TURNNode, SoftgoalNodeViewTry)
+    // configureModelElement(context, 'turnnode:belief', TURNNode, BeliefNodeView)
+    // configureModelElement(context, 'turnnode:actor', TURNNode, ModuleNodeView)
+    // configureModelElement(context, 'turnnode:task', TURNNode, TaskNodeView)
+    // configureModelElement(context, 'turnnode:indicator', TURNNode, IndicatorNodeView)
+    // configureModelElement(context, 'turnnode:resource', TURNNode, ResourceNodeView)
+    // const labelFeatures: CustomFeatures = {
+    //     enable: [selectFeature, openFeature]
+    // };
+    // configureModelElement(context, 'label:heading', SLabel, SLabelView, labelFeatures);
+    // configureModelElement(context, 'label:text', SLabel, SLabelView, labelFeatures);
+    // configureModelElement(context, 'turnlabel:text', TURNLabel, SLabelView, labelFeatures);
+    // configureModelElement(context, 'label:classHeader', SLabel, SLabelView, labelFeatures)
+    // configureModelElement(context, 'comp:comp', SCompartment, SCompartmentView, labelFeatures)
+    // configureModelElement(context, 'comp:classHeader', SCompartment, HeaderCompartmentView)
+    // configureModelElement(context, 'edge:dependency', SEdge, DependencyEdgeView)
+    // configureModelElement(context, 'edge:decomposition', SEdge, DecompositionEdgeView)
+    // configureModelElement(context, 'edge:contribute', SEdge, ContributeEdgeView)
+    // configureModelElement(context, 'edge:correlated', SEdge, CorrelationEdgeView)
+    // configureModelElement(context, 'html', HtmlRoot, HtmlRootView)
+    // configureModelElement(context, 'pre-rendered', PreRenderedElement, PreRenderedView)
+    // configureModelElement(context, ExpandButtonHandler.TYPE, SButton, ExpandButtonView)
 })
 
 export default function createContainer(widgetId: string): Container {

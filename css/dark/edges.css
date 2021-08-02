@@ -5,16 +5,23 @@
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
  */
 
-.sprotty-edge {
+ .sprotty-edge {
     fill: none;
-    stroke: #729A9A;
+    stroke: rgb(181, 182, 221);
     stroke-width: 2px;
 }
 
-path.sprotty-edge.composition {
-    fill: #729A9A;
+.sprotty-edge.composition {
+    fill: rgb(181, 182, 221);
 }
 
-path.sprotty-edge.dashed {
+
+.sprotty-edge.contribution {
+    fill: rgb(181, 182, 221);
+}
+
+.sprotty-edge.dashed {
     stroke-dasharray: 5 5;
 }
+
+
